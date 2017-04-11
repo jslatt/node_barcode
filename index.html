@@ -8,29 +8,29 @@
     <title>Barcode Application</title>
     <link href="static/theme.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/modal.css">
 </head>
-
 <body>
   <div class="ui basic modal">
     <div class="ui icon header">
-      <i class="archive icon"></i>
-      Archive Old Messages
+      <i class="search icon"></i>
+      Manually Enter ID
     </div>
     <div class="content">
-      <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+      <center>
+      <div class="ui container align center">
+        <div class="ui input search align center">
+          <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
+        </div>
+      </div>
+      </center>
     </div>
     <div class="actions">
       <div class="ui red basic cancel inverted button">
         <i class="remove icon"></i>
         No
       </div>
-      <div class="ui green ok inverted button">
+      <div class="ui green ok inverted button searchinit">
         <i class="checkmark icon"></i>
         Yes
       </div>
@@ -42,7 +42,7 @@
       <div class="ui column four wide">
         <div class="ui vertical text menu" style="margin-left: 25%;">
   <div class="header item">Manual Control</div>
-  <a class="item">
+  <a class="item" onclick="$('.ui.basic.modal').modal('show');" >
     Enter ID
   </a>
   <a class="item">
@@ -129,7 +129,10 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="semantic/dist/semantic.min.js"></script>
+  <script src="static/maxsearch.js"></script>
+  <script src="semantic/dist/components/modal.min.js"></script>
 </body>
 
 </html>

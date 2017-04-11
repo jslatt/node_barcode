@@ -2,3 +2,8 @@ body {
   background: #fafafa;
   overflow: hidden; 
 }
+
+.search input {
+  margin-right: auto;
+  margin-left: auto;
+}

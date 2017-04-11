@@ -1,6 +1,6 @@
 {
   "name": "barcode",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Barcode Scanning Electron App",
   "main": "index.js",
   "scripts": {
