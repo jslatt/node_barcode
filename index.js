@@ -6,7 +6,21 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const Dexie = require('dexie')
 
+Dexie.dependencies.indexedDB = require('fake-indexeddb')
+Dexie.dependencies.IDBKeyRange = require('fake-indexeddb/lib/FDBKeyRange')
+// Begin DB
+  var db = new Dexie("UserDatabase");
+  db.version(1).stores({
+    user: "++id,name,code,status"
+  });
+
+  db.user.add({name: "James", code: 001828, status: true})
+
+  var searched = db.user.where("name").equals("James");
+  console.log(searched);
+// End DB
 let mainWindow
 
 function createWindow () {
