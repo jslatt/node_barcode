@@ -1,0 +1,24 @@
+{
+  "name": "barcode",
+  "version": "0.0.1",
+  "description": "Barcode Scanning Electron App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamslatt/node_barcode.git"
+  },
+  "keywords": [
+    "Barcode",
+    "Node",
+    "Electron"
+  ],
+  "author": "James Slattery",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamslatt/node_barcode/issues"
+  },
+  "homepage": "https://github.com/jamslatt/node_barcode#readme"
+}
