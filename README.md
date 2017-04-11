@@ -1,2 +1,2 @@
-# node_barcode
+# Node Barcode App
 Node JS Barcode Scanner App
