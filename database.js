@@ -5,6 +5,9 @@ db.version(1).stores({
     user: "++id,name,code,status"
 });
 
+$('.CreateUser').click(function(){
+  console.log(".CreateUser was clicked?")
+});
 /*
 db.user.add({
     name: "James",
