@@ -12,152 +12,169 @@
     <link rel="stylesheet" type="text/css" href="semantic/dist/components/modal.css">
     <script src="database.js"></script>
 </head>
-<body>
-  <div class="ui basic modal">
-    <div class="ui icon header">
-      <i class="search icon"></i>
-      Manually Enter ID
-    </div>
-    <div class="content">
-      <center>
-      <div class="ui container align center">
-        <div class="ui input search align center">
-          <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
-        </div>
-      </div>
-      </center>
-    </div>
-    <div class="actions">
-      <div class="ui red basic cancel inverted button">
-        <i class="remove icon"></i>
-        No
-      </div>
-      <div class="ui green ok inverted button searchinit">
-        <i class="checkmark icon"></i>
-        Yes
-      </div>
-    </div>
-  </div>
 
-  <br/><br/>
+<body>
+    <div class="ui modal createID">
+        <div class="header">Create a ID</div>
+        <div class="content">
+          <center>
+            <div class="ui input">
+                <input type="text" placeholder="Name">
+            </div>
+            <br/>
+            <div class="ui input">
+                <input type="number" placeholder="Barcode">
+            </div>
+            <br/>
+            <div class="ui input">
+                <label>Admin:</label>
+                <input type="checkbox">
+            </div>
+          </center>
+        </div>
+    </div>
+    <div class="ui basic modal manualEnter">
+        <div class="ui icon header">
+            <i class="search icon"></i> Manually Enter ID
+        </div>
+        <div class="content">
+            <center>
+                <div class="ui container align center">
+                    <div class="ui input search align center">
+                        <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div class="actions">
+            <div class="ui red basic cancel inverted button">
+                <i class="remove icon"></i> No
+            </div>
+            <div class="ui green ok inverted button searchinit">
+                <i class="checkmark icon"></i> Yes
+            </div>
+        </div>
+    </div>
+
+    <br/><br/>
     <div class="ui grid">
-      <div class="ui column four wide">
-        <div class="ui vertical text menu" style="margin-left: 25%;">
-  <div class="header item">Manual Control</div>
-  <a class="item" onclick="$('.ui.basic.modal').modal('show');" >
+        <div class="ui column four wide">
+            <div class="ui vertical text menu" style="margin-left: 25%;">
+                <div class="header item">Manual Control</div>
+                <a class="item" onclick="$('.manualEnter').modal('show');">
     Enter ID
   </a>
-  <a class="item">
+                <a class="item" onclick="$('.createID').modal('show');">
     Create ID
   </a>
-  <a class="item">
+                <a class="item">
     View all ID's
   </a>
-</div>
-    </div>
-    <div class="ui column twelve wide">
-      <div class="ui link cards">
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
-    </div>
-    <div class="content">
-      <div class="header">Matt Giampietro</div>
-      <div class="meta">
-        <a>Friends</a>
-      </div>
-      <div class="description">
-        Matthew is an interior designer living in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
+            </div>
+        </div>
+        <div class="ui column twelve wide">
+            <div class="ui link cards">
+                <div class="card">
+                    <div class="image">
+                        <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Matt Giampietro</div>
+                        <div class="meta">
+                            <a>Friends</a>
+                        </div>
+                        <div class="description">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
         Joined in 2013
       </span>
-      <span>
+                        <span>
         <i class="user icon"></i>
         75 Friends
       </span>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
-    </div>
-    <div class="content">
-      <div class="header">Molly</div>
-      <div class="meta">
-        <span class="date">Coworker</span>
-      </div>
-      <div class="description">
-        Molly is a personal assistant living in Paris.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Molly</div>
+                        <div class="meta">
+                            <span class="date">Coworker</span>
+                        </div>
+                        <div class="description">
+                            Molly is a personal assistant living in Paris.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
         Joined in 2011
       </span>
-      <span>
+                        <span>
         <i class="user icon"></i>
         35 Friends
       </span>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar2/large/elyse.png">
-    </div>
-    <div class="content">
-      <div class="header">Elyse</div>
-      <div class="meta">
-        <a>Coworker</a>
-      </div>
-      <div class="description">
-        Elyse is a copywriter working in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://semantic-ui.com/images/avatar2/large/elyse.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Elyse</div>
+                        <div class="meta">
+                            <a>Coworker</a>
+                        </div>
+                        <div class="description">
+                            Elyse is a copywriter working in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
         Joined in 2014
       </span>
-      <span>
+                        <span>
         <i class="user icon"></i>
         151 Friends
       </span>
-    </div>
-  </div>
-  <div class="card">
-    <div class="image">
-      <img src="https://semantic-ui.com/images/avatar2/large/elyse.png">
-    </div>
-    <div class="content">
-      <div class="header">Elyse</div>
-      <div class="meta">
-        <a>Coworker</a>
-      </div>
-      <div class="description">
-        Elyse is a copywriter working in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="https://semantic-ui.com/images/avatar2/large/elyse.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">Elyse</div>
+                        <div class="meta">
+                            <a>Coworker</a>
+                        </div>
+                        <div class="description">
+                            Elyse is a copywriter working in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
         Joined in 2014
       </span>
-      <span>
+                        <span>
         <i class="user icon"></i>
         151 Friends
       </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="semantic/dist/semantic.min.js"></script>
-  <script src="static/maxsearch.js"></script>
-  <script src="semantic/dist/components/modal.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="static/maxsearch.js"></script>
+    <script src="semantic/dist/components/modal.min.js"></script>
 </body>
 
 </html>
