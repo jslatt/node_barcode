@@ -14,14 +14,10 @@
 </head>
 
 <body>
-    <br/><br/>
     <div class="ui grid">
-        <div class="ui column four wide">
+        <div class="ui column four wide" style="background: #eee; height: 100vh;">
             <div class="ui vertical text menu" style="margin-left: 25%;">
                 <div class="header item">Manual Control</div>
-                <a class="item" onclick="$('.manualEnter').modal('show');">
-    Enter ID
-  </a>
                 <a class="item" onclick="$('.createID').modal('show');">
     Create ID
   </a>
@@ -33,14 +29,44 @@
         <div class="ui column eleven wide" >
           <form>
             <div class="ui input" style="width: 100%;">
-                <input type="text" placeholder="Barcode..." id="barcode" atuofocus/>
+                <input type="text" placeholder="Barcode..." style="border-radius: none; border: none;" id="barcode" atuofocus/>
                 <button type="submit" class="ui searchBar button green" style="display: none;">Search</button>
             </div>
 
           </form>
           <br/>
-          <div class="ui link cards mainView">
+          <div class="ui container mainView">
+            <center>
+              <div class="ui card">
+                  <div class="image">
+                      <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                  </div>
+                  <div class="content">
+                      <div class="header">Molly</div>
+                      <div class="meta">
+                          <span class="date">125618</span>
+                      </div>
+                      <div class="description">
+                          Scientist
+                      </div>
+                  </div>
+                  <div class="extra content">
+                      <span class="right floated">
 
+    </span>
+                      <span>
+      <i class="user icon"></i>
+      512
+    </span>
+                  </div>
+              </div>
+            </center>
+          </div>
+          <div class="ui row">
+            <br/>
+            <h3>Latest Scans:</h3>
+            <div class="ui divider"></div>
+            <div class="latestScan ui link cards"></div>
           </div>
             <div class="ui link cards viewall">
                 <div class="card">
@@ -66,29 +92,6 @@
       </span>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="image">
-                        <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">Molly</div>
-                        <div class="meta">
-                            <span class="date">Coworker</span>
-                        </div>
-                        <div class="description">
-                            Molly is a personal assistant living in Paris.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-        Joined in 2011
-      </span>
-                        <span>
-        <i class="user icon"></i>
-        35 Friends
-      </span>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="ui column one wide">
@@ -100,41 +103,29 @@
         <div class="content">
           <center>
             <div class="ui input">
-                <input type="text" placeholder="Name">
+                <input style="border-radius: 0;" id="CreateName" type="text" placeholder="Name">
             </div>
             <br/>
             <div class="ui input">
-                <input type="number" placeholder="Barcode">
+                <input type="text" style="border-radius: 0;" id="CreateBarcode" placeholder="Barcode (scan)">
             </div>
             <br/>
             <div class="ui input">
-                <label>Admin:</label>
-                <input type="checkbox">
+                <input type="text" style="border-radius: 0;" id="CreateImg" placeholder="Image URL">
             </div>
-            <button class="ui CreateUser button basic blue">Create ID</button>
+            <br/>
+            <div class="ui input">
+                <input type="text" style="border-radius: 0;" id="CreateTitle" placeholder="Title/Description">
+            </div>
+            <br/>
+            <br/>
+            <div class="ui toggle checkbox">
+              <input type="checkbox" id="CreateVerified" name="verified">
+              <label>Verified?</label>
+            </div>
+            <br/><br/>
+            <button class="ui CreateUser button green">Create ID</button>
           </center>
-        </div>
-    </div>
-    <div class="ui basic modal manualEnter">
-        <div class="ui icon header">
-            <i class="search icon"></i> Manually Enter ID
-        </div>
-        <div class="content">
-            <center>
-                <div class="ui container align center">
-                    <div class="ui input search align center">
-                        <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
-                    </div>
-                </div>
-            </center>
-        </div>
-        <div class="actions">
-            <div class="ui red basic cancel inverted button">
-                <i class="remove icon"></i> No
-            </div>
-            <div class="ui green ok inverted button searchinit">
-                <i class="checkmark icon"></i> Yes
-            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -142,6 +133,7 @@
     <script src="semantic/dist/semantic.min.js"></script>
     <script src="static/maxsearch.js"></script>
     <script src="createuser.js"></script>
+    <script src="renderView.js"></script>
     <script src="semantic/dist/components/modal.min.js"></script>
 </body>
 
