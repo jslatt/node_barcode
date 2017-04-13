@@ -1,6 +1,6 @@
 body {
   background: #fafafa;
-  overflow: hidden; 
+  overflow-x: hidden; 
 }
 
 .search input {
