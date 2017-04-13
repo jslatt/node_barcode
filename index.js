@@ -8,6 +8,7 @@ const path = require('path')
 const url = require('url')
 const Dexie = require('dexie')
 
+
 Dexie.dependencies.indexedDB = require('fake-indexeddb')
 Dexie.dependencies.IDBKeyRange = require('fake-indexeddb/lib/FDBKeyRange')
 let mainWindow

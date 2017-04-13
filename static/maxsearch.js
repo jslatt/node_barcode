@@ -5,4 +5,8 @@ $(document).ready(function(){
             return;
         }
     })
+    $('.viewall').hide();
+    $('.viewallid').click(function(){
+        $('.viewall').fadeToggle('slow');
+    })
 });
