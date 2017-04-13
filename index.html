@@ -14,49 +14,6 @@
 </head>
 
 <body>
-    <div class="ui modal createID">
-        <div class="header">Create a ID</div>
-        <div class="content">
-          <center>
-            <div class="ui input">
-                <input type="text" placeholder="Name">
-            </div>
-            <br/>
-            <div class="ui input">
-                <input type="number" placeholder="Barcode">
-            </div>
-            <br/>
-            <div class="ui input">
-                <label>Admin:</label>
-                <input type="checkbox">
-            </div>
-            <button class="ui CreateUser button basic blue">Create ID</button>
-          </center>
-        </div>
-    </div>
-    <div class="ui basic modal manualEnter">
-        <div class="ui icon header">
-            <i class="search icon"></i> Manually Enter ID
-        </div>
-        <div class="content">
-            <center>
-                <div class="ui container align center">
-                    <div class="ui input search align center">
-                        <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
-                    </div>
-                </div>
-            </center>
-        </div>
-        <div class="actions">
-            <div class="ui red basic cancel inverted button">
-                <i class="remove icon"></i> No
-            </div>
-            <div class="ui green ok inverted button searchinit">
-                <i class="checkmark icon"></i> Yes
-            </div>
-        </div>
-    </div>
-
     <br/><br/>
     <div class="ui grid">
         <div class="ui column four wide">
@@ -74,9 +31,13 @@
             </div>
         </div>
         <div class="ui column eleven wide" >
+          <form>
             <div class="ui input" style="width: 100%;">
-                <input type="text" id="barcode" atuofocus/>
+                <input type="text" placeholder="Barcode..." id="barcode" atuofocus/>
+                <button type="submit" class="ui searchBar button green" style="display: none;">Search</button>
             </div>
+
+          </form>
             <div class="ui link cards viewall">
                 <div class="card">
                     <div class="image">
@@ -176,11 +137,53 @@
             &nbsp;
         </div>
     </div>
-
+    <div class="ui modal createID">
+        <div class="header">Create a ID</div>
+        <div class="content">
+          <center>
+            <div class="ui input">
+                <input type="text" placeholder="Name">
+            </div>
+            <br/>
+            <div class="ui input">
+                <input type="number" placeholder="Barcode">
+            </div>
+            <br/>
+            <div class="ui input">
+                <label>Admin:</label>
+                <input type="checkbox">
+            </div>
+            <button class="ui CreateUser button basic blue">Create ID</button>
+          </center>
+        </div>
+    </div>
+    <div class="ui basic modal manualEnter">
+        <div class="ui icon header">
+            <i class="search icon"></i> Manually Enter ID
+        </div>
+        <div class="content">
+            <center>
+                <div class="ui container align center">
+                    <div class="ui input search align center">
+                        <input style="background: rgba(255, 255, 255, 0.8)" type="number" placeholder="Manual Barcode ID">
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div class="actions">
+            <div class="ui red basic cancel inverted button">
+                <i class="remove icon"></i> No
+            </div>
+            <div class="ui green ok inverted button searchinit">
+                <i class="checkmark icon"></i> Yes
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="semantic/dist/semantic.min.js"></script>
     <script src="static/maxsearch.js"></script>
+    <script src="createuser.js"></script>
     <script src="semantic/dist/components/modal.min.js"></script>
 </body>
 
